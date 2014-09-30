@@ -1,0 +1,78 @@
+#-------------------------------------------------------------------------------
+# Name:        battle_1.0
+# Purpose:
+#
+# Author:      broden-collins
+#
+# Created:     27/09/2013
+# Copyright:   (c) broden-collins 2013
+# Licence:     <your licence>
+#-------------------------------------------------------------------------------
+#!/usr/bin/env python
+
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()
+
+class gamer:
+    def __init__(self,h,s,spd,st):
+       self.health = h
+       self.stamina = s
+       self.speed = spd
+       self.strength = st
+knight = gamer(750,75,25,100)
+thief = gamer(230,35,85,30)
+archer = gamer(450,50,65,55)
+
+
+#we'll implement some weapon modifiers here :p
+
+
+class monster:
+    def __init__(self,h,atk,spd):
+        self.health = hl
+        self.attack = atk
+        self.speed = spd
+
+
+
+print "Welcome adventurer"
+print "new game"
+selection = input('0 - Quit\n1 - Choose your warrior\n2 - choose your weapon' )
+while selection != 0:
+    if selection == 1:
+        selection1 = input('\n1 - Knight\n2 - Thief\n3 - Archer \n')
+        if selection1 == 1:
+               hero = gamer(750,75,25,100)
+        elif selection1 == 2:
+               hero = gamer(230,35,85,30)
+        elif selection1 == 3:
+              hero = gamer(450,50,65,55)
+        else:
+            print 'please select a player'
+
+    if selection == 2:
+        selection2 = input('\n1 - Sword\n2 - Axe\n3 - Hammer')
+        if selection2 == 1:
+            armedchar = gamer(hero.health,hero.stamina-5,hero.speed-15,hero.strength+15)
+        elif selection2 == 2:
+             armedchar = gamer(hero.health,hero.stamina-15,hero.speed-25,hero.strength+25)
+        else:
+             armedchar = gamer(hero.health,hero.staminas-30,hero.speed-45,st+50)
+    selection = input('0 - Quit\n1 - Choose your warrior\n2 - choose your weapon')
+
+if monster.speed < hero.speed:
+     d = 0
+elif (hero.strength + hero.health) > monster.health:
+    print'You have slain the beast'
+elif  monster.speed > hero.speed:
+     d == (hero.health + hero.stamina) - (monster.attack)
+     if d <= hero.health:
+        print 'You have survived!'
+     else:
+        print 'Game Over'
+
+
+
