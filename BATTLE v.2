@@ -1,0 +1,96 @@
+#-------------------------------------------------------------------------------
+# Name:        battle_2.0
+# Purpose:
+#
+# Author:      Broden
+#
+# Created:     09/10/2013
+# Copyright:   (c) Broden 2013
+# Licence:     <your licence>
+#-------------------------------------------------------------------------------
+
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()
+
+
+class gamer:
+    def __init__(self,h,s,spd,st):
+       self.health = h
+       self.stamina = s
+       self.speed = spd6
+       self.strength = st
+knight = gamer(750,75,25,100)
+thief = gamer(230,35,85,30)
+archer = gamer(450,50,65,55)
+
+
+#we'll implement some weapon modifiers here :p
+
+
+class monster:
+    def __init__(self,h,atk,spd):
+        self.health = h
+        self.attack = atk
+        self.speed = spd
+zombie = monster(200,75,45)
+troll = monster(700,300,120)
+dragon = monster(1500,750,580)
+
+
+print "Welcome adventurer"
+print "new game"
+selection = input('\n1 - Quit, \n2 - New game')
+if selection != 0:
+    if selection == 1:
+        exit()
+    if selection == 2:
+        print "Welcome"
+        print "Choose your warrior"
+
+selection1 = input('\n1 - Knight\n2 - Thief\n3 - Archer \n')
+if selection1 == 1:
+    hero = gamer(750,75,25,100)
+elif selection1 == 2:
+     hero = gamer(230,35,85,30)
+elif selection1 == 3:
+    hero = gamer(450,50,65,55)
+else:
+    print 'please select a player'
+
+print "Select a weapon"
+
+selection2 = input('\n1 - Sword\n2- Axe\n3 - Hammer')
+if selection2 == 1:
+    armedchar = gamer(hero.health,hero.stamina-5,hero.speed-15,hero.strength+15)
+elif selection2 == 2:
+    armedchar = gamer(hero.health,hero.stamina-15,hero.speed-25,hero.strength+25)
+else:
+    armedchar = gamer(hero.health,hero.stamina-30,hero.speed-45,hero.strength+50)
+
+print "Choose a beast"
+monsterselect = input('\n1 - Zombie\n2 - Troll,\n3 - Dragon')
+if monsterselect == 1:
+    chosenmonster = monster(200,75,45)
+if monsterselect == 2:
+    chosenmonster = monster(700,300,120)
+if monsterselect == 3:
+    chosenmonster = monster(1500,750,580)
+
+dmg = (hero.health + hero.stamina) - (chosenmonster.attack)
+if chosenmonster.speed < hero.speed:
+     dmg == 0
+else:
+     dmg == dmg
+
+if (hero.strength + hero.health) > chosenmonster.health and dmg < hero.health:
+    print'You have slain the beast'
+    print 'You have survived!'
+
+else:
+     print 'Game Over'
+
+
+#It works!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
